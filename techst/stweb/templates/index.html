@@ -1,0 +1,25 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css'%} ">
+    <title>St Tech - Home</title>
+</head>
+<body>
+<img src="{% static 'css/back.jpg'%}">
+<h1>St Tech</h1>
+
+<div class="topnav" id="myTopnav">
+    <a href="index" class="active">Home</a>
+    <a href="contact">Contact</a>
+    <a href="service">Services</a>
+    <a href="aboutus">About us</a>
+    <a href="store">Product Store</a>
+</div>
+
+{%for product in products%}
+<p>{{product.name}}</p>
+{%endfor%}
+</body>
+</html>
